@@ -13,9 +13,6 @@
   "dependencies": {
     "slideout": "^1.0.1"
   },
-  "dependencies": {
-    "slideout": "^1.0.1"
-  },
   "keywords": [
     "nodebb",
     "hyper",
