@@ -133,7 +133,6 @@
 							</li>
 							{{{ end }}}
 							{{{ end }}}
-
                             <!--
 							<li role="presentation" class="divider"></li>
 							<li component="user/logout">
