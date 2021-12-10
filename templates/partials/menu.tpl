@@ -72,6 +72,7 @@
 								</a>
 							</li>
 							<li role="presentation" class="divider"></li>
+                            <!--
 							<li>
 								<a href="#" class="user-status" data-status="online">
 									<i class="fa fa-fw fa-circle status online"></i><span> [[global:online]]</span>
@@ -93,6 +94,7 @@
 								</a>
 							</li>
 							<li role="presentation" class="divider"></li>
+							-->
 							<li>
 								<a component="header/profilelink/edit" href="{relative_path}/user/{user.userslug}/edit">
 									<i class="fa fa-fw fa-edit"></i> <span>[[user:edit-profile]]</span>
@@ -124,6 +126,7 @@
 							</li>
 
 							<!-- ENDIF showModMenu -->
+                            <!--
 							<li role="presentation" class="divider"></li>
 							<li component="user/logout">
 								<form method="post" action="{relative_path}/logout">
@@ -134,6 +137,7 @@
 									</button>
 								</form>
 							</li>
+							-->
 						</ul>
 					</li>
 
@@ -148,12 +152,14 @@
 						</a>
 					</li>
 					<!-- ENDIF allowRegistration -->
+                    <!--
 					<li>
 						<a href="{relative_path}/login">
 							<i class="fa fa-sign-in visible-xs-inline"></i>
 							<span>[[global:login]]</span>
 						</a>
 					</li>
+					-->
 				</ul>
 				<!-- ENDIF config.loggedIn -->
 				<!-- IF config.searchEnabled -->

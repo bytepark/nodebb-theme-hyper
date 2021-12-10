@@ -1,32 +1,35 @@
 {
-  "name": "nodebb-theme-slick",
+  "name": "nodebb-theme-hyper",
   "version": "1.4.18",
   "nbbpm": {
     "compatibility": "^1.18.6"
   },
-  "description": "Slick theme for NodeBB",
+  "description": "Hyper theme for NodeBB, based on slick",
   "main": "theme.less",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pichalite/nodebb-theme-slick.git"
+    "url": "git+https://github.com/bytepark/nodebb-theme-hyper.git"
   },
   "keywords": [
     "nodebb",
+    "hyper",
     "slick",
     "theme",
     "themes"
   ],
-  "author": {
-    "name": "pichalite",
-    "email": "pichalite.com@gmail.com"
-  },
+  "author": "bytepark GmbH <code@bytepark.de>",
   "bugs": {
-    "url": "https://github.com/pichalite/nodebb-theme-slick/issues"
+    "url": "https://github.com/bytepark/nodebb-theme-hyper/issues"
   },
   "maintainers": [
-    {
-      "name": "pichalite",
-      "email": "pichalite.com@gmail.com"
-    }
-  ]
+    "bytepark <code@bytepark.de>"
+  ],
+  "homepage": "https://github.com/bytepark/nodebb-theme-hyper#readme",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT"
 }

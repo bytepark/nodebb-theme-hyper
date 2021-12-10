@@ -1,5 +1,8 @@
 //Dark skin
 @primary-color-dark: #2A9FD6;
+//Red skin
+@primary-color-red: #FF0000;
+@design-color-matte: #434764;
 body {
     &.theme-dark {
         color: #888;
@@ -1284,4 +1287,148 @@ body {
             }
         }
     }
+
+    &.theme-red {
+        color: #434764;
+        background-color: lighten(#FFFFFF, 10%);
+
+        a {
+            color: @primary-color-red;
+        }
+
+        a:hover,
+        a:focus {
+            color: @primary-color-red;
+        }
+
+        .btn-default {
+            color: @design-color-matte;
+            background-color: #fff;
+            border-color: @design-color-matte;
+
+            &.focus, &:focus {
+                color: #fff;
+                background-color: @design-color-matte;
+                border-color: @design-color-matte;
+            }
+
+            &:hover {
+                color: #fff;
+                background-color: @design-color-matte;
+                border-color: @design-color-matte;
+            }
+
+            &.active, &:active {
+                color: #fff;
+                background-color: @design-color-matte;
+                border-color: @design-color-matte;
+
+                &:hover, &:focus, &.focus {
+                    color: #fff;
+                    background-color: @design-color-matte;
+                    border-color: @design-color-matte;
+                }
+            }
+        }
+
+        .btn-primary {
+            color:  @primary-color-red;
+            background-color: #fff;
+            border-color: @primary-color-red;
+
+            &.focus, &:focus {
+                color: #fff;
+                background-color:  @primary-color-red;
+                border-color:  @primary-color-red;
+            }
+
+            &:hover {
+                color: #fff;
+                background-color:  @primary-color-red;
+                border-color:  @primary-color-red;
+            }
+
+            &.active, &:active {
+                color: #fff;
+                background-color:  @primary-color-red;
+                border-color:  @primary-color-red;
+
+                &:hover, &:focus, &.focus {
+                    color: #fff;
+                    background-color:  @primary-color-red;
+                    border-color:  @primary-color-red;
+                }
+            }
+        }
+
+        .categories {
+            .categories-header {
+                .header-title {
+                    border-bottom: 2px solid @primary-color-red;
+                }
+            }
+
+            .category-info {
+                .category-info-content {
+                    .category-icon {
+                        color: @primary-color-red;
+                    }
+
+                    .category-title {
+                        color: inherit;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .subcategories {
+                .subcategory {
+                    .subcategory-icon {
+                        color: @primary-color-red;
+                    }
+
+                    .subcategory-title {
+                        color: inherit;
+                    }
+                }
+            }
+        }
+
+        #menu {
+            background-color: #434764;
+            background-image: none;
+
+            .menu-profile {
+                background-color: #434764;
+            }
+        }
+
+        .navbar-default {
+            &.scrolled {
+                #main-nav {
+                    .active>a {
+                        color: @primary-color-red;
+                        border-bottom: 2px solid @primary-color-red;
+                    }
+                }
+            }
+
+            #main-nav {
+                .active>a {
+                    color: @primary-color-red;
+                    border-bottom: 2px solid @primary-color-red;
+                }
+
+                li>a {
+                    border-bottom: none;
+
+                    &:hover {
+                        border-bottom: 2px solid @primary-color-red;
+                    }
+                }
+            }
+        }
+
+    }
+
 }
