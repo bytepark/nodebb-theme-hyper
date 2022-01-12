@@ -105,7 +105,7 @@
 									<i class="fa fa-fw fa-gear"></i> <span>[[user:settings]]</span>
 								</a>
 							</li>
-							<!-- IF showModMenu -->
+							{{{ if showModMenu }}}
 							<li role="presentation" class="divider"></li>
 							<li class="dropdown-header">[[pages:moderator-tools]]</li>
 							<li>
@@ -118,14 +118,21 @@
 									<i class="fa fa-fw fa-list-alt"></i> <span>[[pages:post-queue]]</span>
 								</a>
 							</li>
-
 							<li>
 								<a href="{relative_path}/ip-blacklist">
 									<i class="fa fa-fw fa-ban"></i> <span>[[pages:ip-blacklist]]</span>
 								</a>
 							</li>
+							{{{ else }}}
+							{{{ if postQueueEnabled }}}
+							<li>
+								<a href="{relative_path}/post-queue">
+									<i class="fa fa-fw fa-list-alt"></i> <span>[[pages:post-queue]]</span>
+								</a>
+							</li>
+							{{{ end }}}
+							{{{ end }}}
 
-							<!-- ENDIF showModMenu -->
                             <!--
 							<li role="presentation" class="divider"></li>
 							<li component="user/logout">
@@ -206,7 +213,7 @@
 					<!-- IF function.displayMenuItem, @index -->
 					<li class="{navigation.class}{{{ if navigation.dropdown }}} dropdown{{{ end }}}">
 						<a title="{navigation.title}" class="navigation-link {{{ if navigation.dropdown }}}dropdown-toggle{{{ end }}}"
-						{{{ if navigation.dropdown }}} href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" {{{ else }}} href="{navigation.route}"{{{ end }}} {{{ if navigation.id }}}id="{navigation.id}"{{{ end }}}{{{ if navigation.properties.targetBlank }}} target="_blank"{{{ end }}}>
+						{{{ if navigation.dropdown }}} href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" {{{ else }}} href="{navigation.route}"{{{ end }}} {{{ if navigation.id }}}id="{navigation.id}"{{{ end }}}{{{ if navigation.targetBlank }}} target="_blank"{{{ end }}}>
 							{{{ if navigation.iconClass }}}
 							<i class="fa fa-fw {navigation.iconClass}" data-content="{navigation.content}"></i>
 							{{{ end }}}
