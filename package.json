@@ -2,13 +2,16 @@
   "name": "nodebb-theme-hyper",
   "version": "1.4.23",
   "nbbpm": {
-    "compatibility": "^1.18.6"
+    "compatibility": "^2.0.0"
   },
   "description": "Hyper theme for NodeBB, based on slick",
   "main": "theme.less",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bytepark/nodebb-theme-hyper.git"
+  },
+  "dependencies": {
+    "slideout": "^1.0.1"
   },
   "keywords": [
     "nodebb",
