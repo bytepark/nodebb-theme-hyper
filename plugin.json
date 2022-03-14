@@ -1,6 +1,6 @@
 {
 	"id": "nodebb-theme-slick",
-	"main": "./lib/theme.js",
+	"library": "./lib/theme.js",
 	"hooks": [
 		{
 			"hook": "static:app.load", "method": "init"
