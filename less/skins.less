@@ -1400,6 +1400,35 @@ body {
                     border-bottom: 2px solid @primary-color-red;
                 }
             }
+            [component="category/topic"] {
+                .title {
+                    a {
+                        color: inherit;
+                    }
+                }
+
+                &.unread {
+                    .title {
+                        a {
+                            color: @primary-color-red;
+                        }
+
+                        small {
+                            a {
+                                color: #888;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .category [component="category/topic"] .teaser a {
+            color: @primary-color-red;
+
+            &.permalink {
+                color: #888;
+            }
         }
 
         #menu {
