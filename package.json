@@ -1,6 +1,6 @@
 {
   "name": "nodebb-theme-hyper",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "nbbpm": {
     "compatibility": "^2.0.0"
   },
@@ -9,6 +9,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bytepark/nodebb-theme-hyper.git"
+  },
+  "dependencies": {
+    "slideout": "^1.0.1"
   },
   "dependencies": {
     "slideout": "^1.0.1"
