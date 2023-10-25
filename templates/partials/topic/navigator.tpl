@@ -8,11 +8,11 @@
         </a>
 
         <i class="fa fa-2x fa-angle-double-down pointer fa-fw pagebottom"></i>
-        <ul class="dropdown-menu dropdown-menu-right" role="menu">
+        <ul class="dropdown-menu dropdown-menu-end" role="menu">
             <li>
                 <div class="row">
-                    <div class="col-xs-8 post-content"></div>
-                    <div class="col-xs-4 text-right">
+                    <div class="col--8 post-content"></div>
+                    <div class="col--4 float-end">
                         <div class="scroller-content">
                             <span class="pointer pagetop">[[topic:first-post]] <i class="fa fa-angle-double-up"></i></span>
                             <div class="scroller-container">

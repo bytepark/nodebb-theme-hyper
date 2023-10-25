@@ -1,8 +1,8 @@
 <div class="row account-menu">
-	<div class="col-xs-12">
-		<ul class="nav nav-pills pull-right">
+	<div class="col--12">
+		<ul class="nav nav-pills float-end">
 			<li>
-				<a href="{config.relative_path}/user/{userslug}" class="inline-block" id="profile">[[user:profile]]</a>
+				<a href="{config.relative_path}/user/{userslug}" class="d-inline-block" id="profile">[[user:profile]]</a>
 			</li>
 			<!-- IF showHidden -->
 			<li><a href="{config.relative_path}/user/{userslug}/edit">[[user:edit]]</a></li>
@@ -12,19 +12,19 @@
 				<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
 			      [[user:more]] <span class="caret"></span>
 			    </a>
-				<ul class="dropdown-menu dropdown-menu-right">
+				<ul class="dropdown-menu dropdown-menu-end">
 					<!-- IF loggedIn -->
 					<!-- IF !isSelf -->
 					<!-- IF !banned -->
 					<!-- IF !config.disableChat -->
-					<li><a component="account/chat" href="#">[[user:chat_with, {username}]]</a></li>
+					<li><a class="dropdown-item" component="account/chat" href="#">[[user:chat_with, {username}]]</a></li>
 					<!-- ENDIF !config.disableChat -->
 
-					<li><a component="account/flag" href="#">[[user:flag-profile]]</a></li>
+					<li><a class="dropdown-item" component="account/flag" href="#">[[user:flag-profile]]</a></li>
 					<li>
-						<a component="account/block" href="#"><!-- IF !../isBlocked -->[[user:block_user]]<!-- ELSE -->[[user:unblock_user]]<!-- END --></a>
+						<a class="dropdown-item" component="account/block" href="#"><!-- IF !../isBlocked -->[[user:block_user]]<!-- ELSE -->[[user:unblock_user]]<!-- END --></a>
 					</li>
-					<li class="divider"></li>
+					<li class="dropdown-devider"></li>
 					<!-- ENDIF !banned -->
 					<!-- ENDIF !isSelf -->
 					<!-- ENDIF loggedIn -->
@@ -33,54 +33,54 @@
 					<!-- IF !isSelf -->
 					<!-- IF canBan -->
 					<li class="<!-- IF banned -->hide<!-- ENDIF banned -->">
-						<a component="account/ban" href="#">[[user:ban_account]]</a>
+						<a class="dropdown-item" component="account/ban" href="#">[[user:ban_account]]</a>
 					</li>
 					<li class="<!-- IF !banned -->hide<!-- ENDIF !banned -->">
-						<a component="account/unban" href="#">[[user:unban_account]]</a>
+						<a class="dropdown-item" component="account/unban" href="#">[[user:unban_account]]</a>
 					</li>
 					<!-- ENDIF canBan -->
 					<!-- IF isAdmin -->
 					<li>
-						<a component="account/delete-account" href="#" class="">[[user:delete_account_as_admin]]</a>
-						<a component="account/delete-content" href="#" class="">[[user:delete_content]]</a>
-						<a component="account/delete-all" href="#" class="">[[user:delete_all]]</a>
+						<a class="dropdown-item" component="account/delete-account" href="#" class="">[[user:delete_account_as_admin]]</a>
+						<a class="dropdown-item" component="account/delete-content" href="#" class="">[[user:delete_content]]</a>
+						<a class="dropdown-item" component="account/delete-all" href="#" class="">[[user:delete_all]]</a>
 					</li>
 					<!-- ENDIF isAdmin -->
-					<li class="divider"></li>
+					<li class="dropdown-devider"></li>
 					<!-- ENDIF !isSelf -->
 
 
-					<li><a href="{config.relative_path}/user/{userslug}/following">[[user:following]]</a></li>
-					<li><a href="{config.relative_path}/user/{userslug}/followers">[[user:followers]]</a></li>
+					<li><a class="dropdown-item" href="{config.relative_path}/user/{userslug}/following">[[user:following]]</a></li>
+					<li><a class="dropdown-item" href="{config.relative_path}/user/{userslug}/followers">[[user:followers]]</a></li>
 					<!-- IF showHidden -->
-					<li><a href="{config.relative_path}/user/{userslug}/blocks">[[user:blocks]]</a></li>
+					<li><a class="dropdown-item" href="{config.relative_path}/user/{userslug}/blocks">[[user:blocks]]</a></li>
 					<!-- ENDIF showHidden -->
-					<li class="divider"></li>
-					<li><a href="{config.relative_path}/user/{userslug}/topics">[[global:topics]]</a></li>
-					<li><a href="{config.relative_path}/user/{userslug}/posts">[[global:posts]]</a></li>
+					<li class="dropdown-devider"></li>
+					<li><a class="dropdown-item" href="{config.relative_path}/user/{userslug}/topics">[[global:topics]]</a></li>
+					<li><a class="dropdown-item" href="{config.relative_path}/user/{userslug}/posts">[[global:posts]]</a></li>
 					<!-- IF !reputation:disabled -->
-					<li><a href="{config.relative_path}/user/{userslug}/best">[[global:best]]</a></li>
+					<li><a class="dropdown-item" href="{config.relative_path}/user/{userslug}/best">[[global:best]]</a></li>
 					<!-- ENDIF !reputation:disabled -->
-					<li><a href="{config.relative_path}/user/{userslug}/groups">[[global:header.groups]]</a></li>
+					<li><a class="dropdown-item" href="{config.relative_path}/user/{userslug}/groups">[[global:header.groups]]</a></li>
 
 					<!-- IF showHidden -->
-					<li><a href="{config.relative_path}/user/{userslug}/bookmarks">[[user:bookmarks]]</a></li>
-					<li><a href="{config.relative_path}/user/{userslug}/watched">[[user:watched]]</a></li>
-					<li><a href="{config.relative_path}/user/{userslug}/ignored">[[user:ignored]]</a></li>
+					<li><a class="dropdown-item" href="{config.relative_path}/user/{userslug}/bookmarks">[[user:bookmarks]]</a></li>
+					<li><a class="dropdown-item" href="{config.relative_path}/user/{userslug}/watched">[[user:watched]]</a></li>
+					<li><a class="dropdown-item" href="{config.relative_path}/user/{userslug}/ignored">[[user:ignored]]</a></li>
 					<!-- IF !reputation:disabled -->
-					<li><a href="{config.relative_path}/user/{userslug}/upvoted">[[global:upvoted]]</a></li>
+					<li><a class="dropdown-item" href="{config.relative_path}/user/{userslug}/upvoted">[[global:upvoted]]</a></li>
 					<!-- IF !downvote:disabled -->
-					<li><a href="{config.relative_path}/user/{userslug}/downvoted">[[global:downvoted]]</a></li>
+					<li><a class="dropdown-item" href="{config.relative_path}/user/{userslug}/downvoted">[[global:downvoted]]</a></li>
 					<!-- ENDIF !downvote:disabled -->
 					<!-- ENDIF !reputation:disabled -->
-					<li><a href="{config.relative_path}/user/{userslug}/uploads">[[global:uploads]]</a></li>
+					<li><a class="dropdown-item" href="{config.relative_path}/user/{userslug}/uploads">[[global:uploads]]</a></li>
 					<!-- ENDIF showHidden -->
 
 					<!-- BEGIN profile_links -->
 					<!-- IF @first -->
-					<li class="divider"></li>
+					<li class="dropdown-devider"></li>
 					<!-- ENDIF @first -->
-					<li id="{profile_links.id}" class="plugin-link <!-- IF profile_links.public -->public<!-- ELSE -->private<!-- ENDIF profile_links.public -->"><a href="{config.relative_path}/user/{userslug}/{profile_links.route}"><!-- IF profile_links.icon --><i class="fa fa-fw {profile_links.icon}"></i> <!-- ENDIF profile_links.icon -->{profile_links.name}</a></li>
+					<li id="{profile_links.id}" class="plugin-link <!-- IF profile_links.public -->public<!-- ELSE -->private<!-- ENDIF profile_links.public -->"><a class="dropdown-item" href="{config.relative_path}/user/{userslug}/{profile_links.route}"><!-- IF profile_links.icon --><i class="fa fa-fw {profile_links.icon}"></i> <!-- ENDIF profile_links.icon -->{profile_links.name}</a></li>
 					<!-- END profile_links -->
 				</ul>
 			</li>

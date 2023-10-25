@@ -14,7 +14,7 @@
 		<!-- IF !uploads.length -->
 		<div class="alert alert-warning text-center">[[uploads:no-uploads-found]]</div>
 		<!-- ELSE -->
-		<div class="col-xs-12">
+		<div class="col--12">
             <table class="table table-striped">
                 <thead>
                     <tr>

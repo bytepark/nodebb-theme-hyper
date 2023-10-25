@@ -27,7 +27,7 @@
 						<!-- BEGIN usernames -->
 						<li class="list-group-item">
 							{../value}
-							<small class="pull-right"><span class="timeago" title="{../timestampISO}"></span></small>
+							<small class="float-end"><span class="timeago" title="{../timestampISO}"></span></small>
 						</li>
 						<!-- END usernames -->
 					</ul>
@@ -43,7 +43,7 @@
 						<!-- BEGIN emails -->
 						<li class="list-group-item">
 							{../value}
-							<small class="pull-right"><span class="timeago" title="{../timestampISO}"></span></small>
+							<small class="float-end"><span class="timeago" title="{../timestampISO}"></span></small>
 						</li>
 						<!-- END emails -->
 					</ul>
@@ -85,11 +85,11 @@
 
 						<!-- IF !banned -->
 						<!-- IF !isSelf -->
-						<button class="btn btn-xs pull-right btn-danger" component="account/ban">[[user:ban_account]]</button>
+						<button class="btn btn-xs float-end btn-danger" component="account/ban">[[user:ban_account]]</button>
 						<!-- ENDIF !isSelf -->
 						<!-- ELSE -->
 						<!-- IF !isSelf -->
-						<button class="btn btn-xs pull-right btn-success" component="account/unban">[[user:unban_account]]</button>
+						<button class="btn btn-xs float-end btn-success" component="account/unban">[[user:unban_account]]</button>
 						<!-- ENDIF !isSelf -->
 						<!-- ENDIF !banned -->
 					</h3>

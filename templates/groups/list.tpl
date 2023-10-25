@@ -9,14 +9,14 @@
 		</div>
 		<div class="col-lg-8">
 			<div class="row">
-				<div class="col-xs-5 col-md-3 text-left pull-right">
+				<div class="col--5 col-md-3 text-left float-end">
 					<select class="form-control" id="search-sort">
 						<option value="alpha">[[groups:details.group_name]]</option>
 						<option value="count">[[groups:details.member_count]]</option>
 						<option value="date">[[groups:details.creation_date]]</option>
 					</select>
 				</div>
-				<div class="col-xs-7 col-md-5 text-left pull-right">
+				<div class="col--7 col-md-5 text-left float-end">
 					<div class="input-group">
 						<input type="text" class="form-control" placeholder="[[global:search]]" name="query" value="" id="search-text">
 						<span id="search-button" class="input-group-addon search-button"><i class="fa fa-search"></i></span>
@@ -30,7 +30,7 @@
 		<!-- IF groups.length -->
 		<!-- IMPORT partials/groups/list.tpl -->
 		<!-- ELSE -->
-		<div class="col-xs-12">
+		<div class="col--12">
 			<div class="alert alert-warning">
 			[[groups:no_groups_found]]
 			</div>

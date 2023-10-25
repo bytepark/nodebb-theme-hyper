@@ -14,7 +14,7 @@
 						<div class="col-lg-7">
 							<input class="form-control" type="email" placeholder="[[register:email_address_placeholder]]" name="email" id="email" autocorrect="off" autocapitalize="off" />
 							<span class="register-feedback" id="email-notify"></span>
-							<span class="help-block">[[register:help.email]]</span>
+							<span class="form-text">[[register:help.email]]</span>
 						</div>
 					</div>
 					<div class="form-group">
@@ -22,7 +22,7 @@
 						<div class="col-lg-7">
 							<input class="form-control" type="text" placeholder="[[register:username_placeholder]]" name="username" id="username" autocorrect="off" autocapitalize="off" autocomplete="off" />
 							<span class="register-feedback" id="username-notify"></span>
-							<span class="help-block">[[register:help.username_restrictions, {minimumUsernameLength}, {maximumUsernameLength}]]</span>
+							<span class="form-text">[[register:help.username_restrictions, {minimumUsernameLength}, {maximumUsernameLength}]]</span>
 						</div>
 					</div>
 					<div class="form-group">
@@ -30,7 +30,7 @@
 						<div class="col-lg-7">
 							<input class="form-control" type="password" placeholder="[[register:password_placeholder]]" name="password" id="password" />
 							<span class="register-feedback" id="password-notify"></span>
-							<span class="help-block">[[register:help.minimum_password_length, {minimumPasswordLength}]]</span>
+							<span class="form-text">[[register:help.minimum_password_length, {minimumPasswordLength}]]</span>
 						</div>
 					</div>
 					<div class="form-group">

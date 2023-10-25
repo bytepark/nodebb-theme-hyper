@@ -14,7 +14,7 @@
 			</a>
 		</div>
 	</div>
-	<div class="col-xs-12 col-sm-10 quickreply-message">
+	<div class="col--12 col-sm-10 quickreply-message">
 		<textarea component="topic/quickreply/text" class="form-control" rows="5"></textarea>
 	</div>
 	<button component="topic/quickreply/button" class="btn btn-primary">[[topic:post-quick-reply]]</button>

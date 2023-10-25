@@ -1,14 +1,14 @@
 <div class="row post-header">
-	<div class="col-xs-12">
-		<div class="post-time pull-left">
+	<div class="col--12">
+		<div class="post-time float-start">
 			<a class="permalink" href="{config.relative_path}/post/{posts.pid}"><span class="timeago" title="{posts.timestampISO}"></span></a>
 		</div>
-		<div class="post-editor pull-left">
+		<div class="post-editor float-start">
 			<i component="post/edit-indicator" class="fa fa-pencil-square pointer edit-icon <!-- IF !posts.editor.username -->hidden<!-- ENDIF !posts.editor.username -->"></i>
 			<small data-editor="{posts.editor.userslug}" component="post/editor" class="hidden">[[global:last_edited_by, {posts.editor.username}]] <span class="timeago" title="{posts.editedISO}"></span></small>
 		</div>
 		<!-- IF !reputation:disabled -->
-		<div class="votes pull-right">
+		<div class="votes float-end">
 			<a component="post/upvote" href="#" class="<!-- IF posts.upvoted -->upvoted<!-- ENDIF posts.upvoted -->">
 				<i class="fa fa-chevron-up"></i>
 			</a>
@@ -57,11 +57,11 @@
 	<!-- ENDIF posts.user.signature -->
 </div>
 <div class="row post-footer">
-	<div class="col-xs-12">
-		<div class="pull-left">
+	<div class="col--12">
+		<div class="float-start">
 			<!-- IMPORT partials/topic/reactions.tpl -->
 		</div>
-		<div class="pull-right">
+		<div class="float-end">
 			<div class="post-tools">
 				<a component="post/reply" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
 				<a component="post/quote" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:quote]]</a>

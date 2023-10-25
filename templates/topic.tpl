@@ -4,9 +4,9 @@
 
 		<h1 component="post/header" class="hidden-xs">
 			<span component="topic/labels">
-				<i component="topic/pinned" class="pull-left fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->" title="{{{ if !pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {pinExpiryISO}]]{{{ end }}}"></i>
-				<i component="topic/locked" class="pull-left fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->" title="[[topic:locked]]"></i>
-				<i class="pull-left fa fa-arrow-circle-right <!-- IF !oldCid -->hidden<!-- ENDIF !oldCid -->" title="[[topic:moved]]"></i>
+				<i component="topic/pinned" class="float-start fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->" title="{{{ if !pinExpiry }}}[[topic:pinned]]{{{ else }}}[[topic:pinned-with-expiry, {pinExpiryISO}]]{{{ end }}}"></i>
+				<i component="topic/locked" class="float-start fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->" title="[[topic:locked]]"></i>
+				<i class="float-start fa fa-arrow-circle-right <!-- IF !oldCid -->hidden<!-- ENDIF !oldCid -->" title="[[topic:moved]]"></i>
 				<!-- BEGIN icons -->{@value}<!-- END icons -->
 			</span>
 			<span class="topic-title" component="topic/title">{title}</span>
@@ -14,8 +14,8 @@
 
 		<!-- IF merger -->
 		<div component="topic/merged/message" class="alert alert-warning clearfix">
-			<span class="pull-left">[[topic:merged_message, {mergeIntoTid}, {merger.mergedIntoTitle}]]</span>
-			<span class="pull-right">
+			<span class="float-start">[[topic:merged_message, {mergeIntoTid}, {merger.mergedIntoTitle}]]</span>
+			<span class="float-end">
 				<a href="{config.relative_path}/user/{merger.userslug}">
 					<strong>{merger.username}</strong>
 				</a>

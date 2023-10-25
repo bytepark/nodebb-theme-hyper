@@ -1,13 +1,13 @@
 <div class="categories" itemscope itemtype="http://www.schema.org/ItemList">
     <div class="row categories-header hidden-xs hidden-sm">
-        <div class="col-md-8 col-xs-12"><div class="header-title">[[category:category]]</div></div>
+        <div class="col-md-8 col--12"><div class="header-title">[[category:category]]</div></div>
         <div class="col-md-1"><div class="header-title">[[global:topics]]</div></div>
         <div class="col-md-1"><div class="header-title">[[global:posts]]</div></div>
         <div class="col-md-2"><div class="header-title">Last Post</div></div>
     </div>
     <!-- BEGIN categories -->
     <div class="row" component="categories/category" data-cid="{categories.cid}" data-numRecentReplies="1">
-        <div class="col-md-8 col-xs-12">
+        <div class="col-md-8 col--12">
             <div class="category-info">
                 <div class="category-info-content">
                     <div class="category-icon">

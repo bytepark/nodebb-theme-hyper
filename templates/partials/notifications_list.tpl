@@ -11,10 +11,10 @@
 	<div class="notification-image">
 		<!-- IF notifications.image -->
 		<!-- IF notifications.from -->
-		<a href="{config.relative_path}/user/{notifications.user.userslug}"><img class="pull-left user-avatar"src="{notifications.image}" /></a>
+		<a href="{config.relative_path}/user/{notifications.user.userslug}"><img class="float-start user-avatar"src="{notifications.image}" /></a>
 		<!-- ENDIF notifications.from -->
 		<!-- ELSE -->
-		<a href="{config.relative_path}/user/{notifications.user.userslug}"><div class="pull-left user-icon" style="background-color: {notifications.user.icon:bgColor};">{notifications.user.icon:text}</div></a>
+		<a href="{config.relative_path}/user/{notifications.user.userslug}"><div class="float-start user-icon" style="background-color: {notifications.user.icon:bgColor};">{notifications.user.icon:text}</div></a>
 		<!-- ENDIF notifications.image -->
 	</div>
 

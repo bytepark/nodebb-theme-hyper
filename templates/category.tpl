@@ -14,11 +14,11 @@
 				<!-- ENDIF !loggedIn -->
 			<!-- ENDIF privileges.topics:create -->
 
-			<a href="{url}" class="inline-block">
+			<a href="{url}" class="d-inline-block">
 				<div class="alert alert-warning hide" id="new-topics-alert"></div>
 			</a>
 
-			<span class="pull-right" component="category/controls">
+			<span class="float-end" component="category/controls">
 				<!-- IMPORT partials/category/watch.tpl -->
 				<!-- IMPORT partials/category/sort.tpl -->
 				<!-- IMPORT partials/category/tools.tpl -->

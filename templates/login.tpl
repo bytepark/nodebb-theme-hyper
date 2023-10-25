@@ -26,11 +26,9 @@
 					</div>
 					<div class="form-group">
 						<div class="col-lg-offset-2 col-lg-10">
-							<div class="checkbox">
-								<label>
-									<input type="checkbox" name="remember" id="remember" checked /> [[login:remember_me]]
-									<i class="input-helper"></i>
-								</label>
+							<div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="remember" id="remember" checked />
+								<label class="form-check-label">[[login:remember_me]] <i class="input-helper"></i></label>
 							</div>
 						</div>
 					</div>

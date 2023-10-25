@@ -4,7 +4,7 @@
 	<!-- IMPORT partials/account/menu.tpl -->
 
 	<div class="following row">
-		<div class="col-xs-12">
+		<div class="col--12">
 			<h1>[[pages:{template.name}, {username}]]</h1>
 
 			<ul id="users-container" class="users-container" data-nextstart="{nextStart}">

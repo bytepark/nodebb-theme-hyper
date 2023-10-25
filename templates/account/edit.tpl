@@ -7,7 +7,7 @@
 		<div class="col-md-2 col-sm-4">
 			<div class="account-picture-block text-center">
 				<div class="row">
-					<div class="col-xs-12">
+					<div class="col--12">
 						<!-- IF picture -->
 						<img id="user-current-picture" class="user-avatar" src="{picture}" />
 						<!-- ELSE -->
@@ -56,14 +56,14 @@
 					<form component="profile/edit/form">
 
 						<div class="form-group">
-							<label class="control-label" for="inputFullname">[[user:fullname]]</label>
+							<label class="form-label control-label" for="inputFullname">[[user:fullname]]</label>
 							<div class="controls">
 								<input class="form-control" type="text" id="inputFullname" placeholder="[[user:fullname]]" value="{fullname}" name="fullname">
 							</div>
 						</div>
 						<!-- IF allowWebsite -->
 						<div class="form-group">
-							<label class="control-label" for="inputWebsite">[[user:website]]</label>
+							<label class="form-label control-label" for="inputWebsite">[[user:website]]</label>
 							<div class="controls">
 								<input class="form-control" type="text" id="inputWebsite" placeholder="http://..." value="{website}" name="website">
 							</div>
@@ -71,21 +71,21 @@
 						<!-- ENDIF allowWebsite -->
 
 						<div class="form-group">
-							<label class="control-label" for="inputLocation">[[user:location]]</label>
+							<label class="form-label control-label" for="inputLocation">[[user:location]]</label>
 							<div class="controls">
 								<input class="form-control" type="text" id="inputLocation" placeholder="[[user:location]]" value="{location}" name="location">
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label class="control-label" for="inputBirthday">[[user:birthday]]</label>
+							<label class="form-label control-label" for="inputBirthday">[[user:birthday]]</label>
 							<div class="controls">
 								<input class="form-control" id="inputBirthday" value="{birthday}" placeholder="mm/dd/yyyy" name="birthday>
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label class="control-label" for="grouptitle">[[user:grouptitle]]</label>
+							<label class="form-label control-label" for="grouptitle">[[user:grouptitle]]</label>
 							<div class="controls">
 								<select class="form-control" id="groupTitle" data-property="groupTitle" name="groupTitle" <!-- IF allowMultipleBadges --> multiple<!-- ENDIF allowMultipleBadges -->>
 									<option value="">[[user:no-group-title]]</option>
@@ -99,7 +99,7 @@
 						</div>
 						<!-- IF allowAboutMe -->
 						<div class="form-group">
-							<label class="control-label" for="inputAboutMe">[[user:aboutme]]</label> <small><label id="aboutMeCharCountLeft"></label></small>
+							<label class="form-label control-label" for="inputAboutMe">[[user:aboutme]]</label> <small><label id="aboutMeCharCountLeft"></label></small>
 							<div class="controls">
 								<textarea class="form-control" id="inputAboutMe" rows="5" name="aboutme">{aboutme}</textarea>
 							</div>
@@ -109,7 +109,7 @@
 						<!-- IF allowSignature -->
 						<!-- IF !disableSignatures -->
 						<div class="form-group">
-							<label class="control-label" for="inputSignature">[[user:signature]]</label> <small><label id="signatureCharCountLeft"></label></small>
+							<label class="form-label control-label" for="inputSignature">[[user:signature]]</label> <small><label id="signatureCharCountLeft"></label></small>
 							<div class="controls">
 								<textarea class="form-control" id="inputSignature" rows="5" name="signature">{signature}</textarea>
 							</div>
@@ -129,12 +129,12 @@
 				<!-- IF sso.length -->
 				<div class="col-md-5 col-sm-12">
 					<hr class="visible-xs visible-sm" />
-					<label class="control-label">[[user:sso.title]]</label>
+					<label class="form-label control-label">[[user:sso.title]]</label>
 					<div class="list-group">
 						<!-- BEGIN sso -->
 						<div class="list-group-item">
 							<!-- IF ../deauthUrl -->
-							<a class="btn btn-default btn-xs pull-right" href="{../deauthUrl}">[[user:sso.dissociate]]</a>
+							<a class="btn btn-default btn-xs float-end" href="{../deauthUrl}">[[user:sso.dissociate]]</a>
 							<!-- END -->
 							<a href="{../url}" target="<!-- IF ../associated -->_blank<!-- ELSE -->_top<!-- ENDIF ../associated -->">
 								<!-- IF ../icon --><i class="fa {../icon}"></i><!-- ENDIF ../icon -->

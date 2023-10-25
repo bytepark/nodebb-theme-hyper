@@ -2,7 +2,7 @@
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 
 	<div class="row">
-		<div class="col-lg-4 col-xs-12">
+		<div class="col-lg-4 col--12">
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h3 class="panel-title">
@@ -15,12 +15,12 @@
 					<h1>{group.displayName}</h1>
 					{group.descriptionParsed}
 					<!-- IF isAdmin -->
-					<div class="pull-right">
+					<div class="float-end">
 						<a href="{config.relative_path}/admin/manage/groups/{group.nameEncoded}" target="_blank" class="btn btn-info"><i class="fa fa-gear"></i> [[user:edit]]</a>
 					</div>
 					<!-- ENDIF isAdmin -->
 					<!-- IF loggedIn -->
-					<div class="pull-right">
+					<div class="float-end">
 						{function.membershipBtn, group}&nbsp;
 					</div>
 					<!-- ENDIF loggedIn -->
@@ -40,13 +40,13 @@
 					<h3 class="panel-title clearfix">
 						<i class="fa fa-clock-o"></i> [[groups:details.pending]]
 						<!-- IF group.pending.length -->
-						<div class="btn-group pull-right">
+						<div class="btn-group float-end">
 							<button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 								[[global:more]] <span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="#" data-ajaxify="false" data-action="acceptAll">[[groups:pending.accept_all]]</a></li>
-								<li><a href="#" data-ajaxify="false" data-action="rejectAll">[[groups:pending.reject_all]]</a></li>
+								<li><a class="dropdown-item" href="#" data-ajaxify="false" data-action="acceptAll">[[groups:pending.accept_all]]</a></li>
+								<li><a class="dropdown-item" href="#" data-ajaxify="false" data-action="rejectAll">[[groups:pending.reject_all]]</a></li>
 							</ul>
 						</div>
 						<!-- ENDIF group.pending.length -->
@@ -70,7 +70,7 @@
 								<a href="{config.relative_path}/user/{group.pending.userslug}">{group.pending.username}</a>
 							</td>
 							<td>
-								<div class="btn-group pull-right">
+								<div class="btn-group float-end">
 									<button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 										[[global:more]] <span class="caret"></span>
 									</button>
@@ -114,7 +114,7 @@
 								<a href="{config.relative_path}/user/{group.invited.userslug}">{group.invited.username}</a>
 							</td>
 							<td>
-								<div class="btn-group pull-right">
+								<div class="btn-group float-end">
 									<button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 										[[global:more]] <span class="caret"></span>
 									</button>
@@ -130,9 +130,9 @@
 			</div>
 
 			<div class="panel panel-default">
-				<div class="panel-heading pointer" data-toggle="collapse" data-target=".options">
+				<div class="panel-heading pointer" data-bs-toggle="collapse" data-bs-target=".options">
 					<h3 class="panel-title">
-						<i class="fa fa-caret-down pull-right"></i>
+						<i class="fa fa-caret-down float-end"></i>
 						<i class="fa fa-cogs"></i> [[groups:details.owner_options]]
 					</h3>
 				</div>
@@ -191,40 +191,41 @@
 							</div>
 						</div>
 						<hr />
-						<div class="checkbox">
-							<label>
-								<input name="userTitleEnabled" type="checkbox"<!-- IF group.userTitleEnabled --> checked<!-- ENDIF group.userTitleEnabled -->><i class="input-helper"></i> <strong>[[groups:details.userTitleEnabled]]</strong>
+						<div class="form-check">
+                            <input class="form-check-input" name="userTitleEnabled" type="checkbox"<!-- IF group.userTitleEnabled --> checked<!-- ENDIF group.userTitleEnabled -->><i class="input-helper">
+                            <label class="form-check-label">
+                            </i> <strong>[[groups:details.userTitleEnabled]]</strong>
 							</label>
 						</div>
-						<div class="checkbox">
-							<label>
-								<input name="private" type="checkbox"<!-- IF group.private --> checked<!-- ENDIF group.private -->><i class="input-helper"></i> <strong>[[groups:details.private]]</strong>
+						<div class="form-check">
+                            <input class="form-check-input" name="private" type="checkbox"<!-- IF group.private --> checked<!-- ENDIF group.private -->>
+                            <label class="form-check-label"><i class="input-helper"></i> <strong>[[groups:details.private]]</strong>
 								<!-- IF !allowPrivateGroups -->
-								<p class="help-block">
+								<p class="form-text">
 									[[groups:details.private_system_help]]
 								</p>
 								<!-- ENDIF !allowPrivateGroups -->
-								<p class="help-block">
+								<p class="form-text">
 									[[groups:details.private_help]]
 								</p>
 							</label>
 						</div>
-						<div class="checkbox">
-							<label>
-								<input name="disableJoinRequests" type="checkbox"<!-- IF group.disableJoinRequests --> checked<!-- ENDIF group.disableJoinRequests -->><i class="input-helper"></i> <strong>[[groups:details.disableJoinRequests]]</strong>
+						<div class="form-check">
+                            <input class="form-check-input" name="disableJoinRequests" type="checkbox"<!-- IF group.disableJoinRequests --> checked<!-- ENDIF group.disableJoinRequests -->>
+                            <label class="form-check-label"><i class="input-helper"></i> <strong>[[groups:details.disableJoinRequests]]</strong>
 							</label>
 						</div>
-						<div class="checkbox">
-							<label>
-								<input name="hidden" type="checkbox"<!-- IF group.hidden --> checked<!-- ENDIF group.hidden -->><i class="input-helper"></i> <strong>[[groups:details.hidden]]</strong>
-								<p class="help-block">
+						<div class="form-check">
+                            <input class="form-check-input" name="hidden" type="checkbox"<!-- IF group.hidden --> checked<!-- ENDIF group.hidden -->>
+                            <label class="form-check-label"><i class="input-helper"></i> <strong>[[groups:details.hidden]]</strong>
+								<p class="form-text">
 									[[groups:details.hidden_help]]
 								</p>
 							</label>
 						</div>
 
 						<!-- IF !group.system -->
-						<button class="btn btn-danger btn-xs pull-right" type="button" data-action="delete">[[groups:details.delete_group]]</button>
+						<button class="btn btn-danger btn-xs float-end" type="button" data-action="delete">[[groups:details.delete_group]]</button>
 						<!-- ENDIF !group.system -->
 						<button class="btn btn-primary" type="button" data-action="update">[[global:save_changes]]</button>
 					</form>
@@ -233,7 +234,7 @@
 			<!-- ENDIF group.isOwner -->
 			<div data-widget-area="left"></div>
 		</div>
-		<div class="col-lg-8 col-xs-12">
+		<div class="col-lg-8 col--12">
 			<div class="col-lg-11">
 				<!-- IF !posts.length -->
 				<div class="alert alert-info">[[groups:details.has_no_posts]]</div>

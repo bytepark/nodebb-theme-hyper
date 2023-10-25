@@ -1,12 +1,12 @@
 <div class="account">
 	<!-- IMPORT partials/breadcrumbs.tpl -->
-	
+
 	<!-- IMPORT partials/account/menu.tpl -->
 
 	<div class="row">
-		<div class="col-xs-12">
+		<div class="col--12">
 			<h1>[[pages:{template.name}, {username}]]</h1>
-		
+
 			<div class="groups list">
 				<div component="groups/container" id="groups-list" class="row">
 					<!-- IF !groups.length -->

@@ -5,12 +5,12 @@
 
 	<!-- IF sessions.length -->
 	<div class="row">
-		<div class="col-xs-12 col-md-12">
+		<div class="col--12 col-md-12">
 			<h4>[[global:sessions]]</h4>
 			<ul class="list-group" component="user/sessions">
 				<!-- BEGIN sessions -->
 				<li class="list-group-item" data-uuid="{../uuid}">
-					<div class="pull-right">
+					<div class="float-end">
 						<!-- IF !../current -->
 						<!-- IF isSelfOrAdminOrGlobalModerator -->
 						<button class="btn btn-xs btn-default" type="button" data-action="revokeSession">Revoke Session</button>

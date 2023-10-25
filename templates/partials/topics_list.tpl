@@ -2,7 +2,7 @@
 	<meta itemprop="itemListOrder" content="descending">
 	<!-- IF topics.length -->
 	<div class="row topics-header hidden-xs hidden-sm">
-		<div class="col-md-8 col-xs-12"><div class="header-title">[[global:topics]]</div></div>
+		<div class="col-md-8 col--12"><div class="header-title">[[global:topics]]</div></div>
 		<div class="col-md-1"><div class="header-title">[[global:posts]]</div></div>
 		<div class="col-md-1"><div class="header-title">[[global:views]]</div></div>
 		<div class="col-md-2"><div class="header-title">[[global:lastpost]]</div></div>
@@ -12,9 +12,9 @@
 	<div component="category/topic" class="row category-item {function.generateTopicClass}" <!-- IMPORT partials/data/category.tpl -->>
 		<a id="{../index}" data-index="{../index}" component="topic/anchor"></a>
 		<meta itemprop="name" content="{function.stripTags, title}">
-		<div class="col-md-8 col-xs-12">
+		<div class="col-md-8 col--12">
 			<!-- IF showSelect -->
-			<div class="checkbox pull-left" component="topic/select">
+			<div class="checkbox float-start" component="topic/select">
 				<label>
 					<div class="select"></div>
 					<i class="input-helper"></i>
@@ -22,7 +22,7 @@
 			</div>
 			<!-- ENDIF showSelect -->
 			<div class="topic-author">
-				<a href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->" class="pull-left">
+				<a href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->" class="float-start">
 					<!-- IF topics.thumb -->
 					<img src="{topics.thumb}" class="user-img" alt="{topics.user.username}" />
 					<!-- ELSE -->

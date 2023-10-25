@@ -16,17 +16,17 @@
 		<!-- END -->
 		<span class="chat-timestamp timeago" title="{messages.timestampISO}"></span>
 		<!-- IF isAdminOrGlobalMod -->
-		<small class="chat-ip pull-right" title="[[modules:chat.show-ip]]"><i class="fa fa-info-circle chat-ip-button"></i></small>
+		<small class="chat-ip float-end" title="[[modules:chat.show-ip]]"><i class="fa fa-info-circle chat-ip-button"></i></small>
 		<!-- ENDIF isAdminOrGlobalMod -->
 	</div>
 	<div component="chat/message/body" class="message-body">
 		<!-- IF messages.edited -->
-		<small class="text-muted pull-right" title="[[global:edited]] {messages.editedISO}"><i class="fa fa-edit"></i></span></small>
+		<small class="text-muted float-end" title="[[global:edited]] {messages.editedISO}"><i class="fa fa-edit"></i></span></small>
 		<!-- ENDIF messages.edited -->
 
 		<!-- IF !config.disableChatMessageEditing -->
 		<!-- IF messages.self -->
-		<div class="pull-right btn-group controls">
+		<div class="float-end btn-group controls">
 			<button class="btn btn-xs btn-link" data-action="edit"><i class="fa fa-pencil"></i></button>
 			<button class="btn btn-xs btn-link" data-action="delete"><i class="fa fa-times"></i></button>
 			<button class="btn btn-xs btn-link" data-action="restore"><i class="fa fa-repeat"></i></button>

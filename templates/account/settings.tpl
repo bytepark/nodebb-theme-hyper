@@ -4,7 +4,7 @@
 	<!-- IMPORT partials/account/menu.tpl -->
 
 	<div class="row">
-		<div class="col-xs-12">
+		<div class="col--12">
 			<!-- IF allowUserHomePage -->
 			<h4>[[user:select-homepage]]</h4>
 			<div class="user-setting">
@@ -16,65 +16,58 @@
 						<option value="{homePageRoutes.route}" <!-- IF homePageRoutes.selected -->selected="1"<!-- ENDIF homePageRoutes.selected -->>{homePageRoutes.name}</option>
 						<!-- END homePageRoutes -->
 					</select>
-					<p class="help-block">[[user:homepage_description]]</p>
+					<p class="form-text">[[user:homepage_description]]</p>
 				</div>
 				<div id="homePageCustom" class="form-group" style="display: none;">
 					<label for="homePageCustom">[[user:custom_route]]</label>
 					<input type="text" class="form-control" data-property="homePageCustom" id="homePageCustom" value="{settings.homePageRoute}"/>
-					<p class="help-block">[[user:custom_route_help]]</p>
+					<p class="form-text">[[user:custom_route_help]]</p>
 				</div>
 			</div>
 			<!-- ENDIF allowUserHomePage -->
 
 			<h4>[[user:browsing]]</h4>
 			<div class="user-setting">
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="openOutgoingLinksInNewTab" <!-- IF settings.openOutgoingLinksInNewTab -->checked<!-- ENDIF settings.openOutgoingLinksInNewTab -->/><i class="input-helper"></i> <strong>[[user:open_links_in_new_tab]]</strong>
-					</label>
+				<div class="form-check>
+						<input class="form-check-input" type="checkbox" data-property="openOutgoingLinksInNewTab" <!-- IF settings.openOutgoingLinksInNewTab -->checked<!-- ENDIF settings.openOutgoingLinksInNewTab -->/>
+                <label class="form-check-label"><i class="input-helper"></i> <strong>[[user:open_links_in_new_tab]]</strong></label>
 				</div>
 				<!-- IF inTopicSearchAvailable -->
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="topicSearchEnabled" <!-- IF settings.topicSearchEnabled -->checked<!-- ENDIF settings.topicSearchEnabled -->/><i class="input-helper"></i> <strong>[[user:enable_topic_searching]]</strong>
-					</label>
+				<div class="form-check">
+                    <input class="form-check-input" type="checkbox" data-property="topicSearchEnabled" <!-- IF settings.topicSearchEnabled -->checked<!-- ENDIF settings.topicSearchEnabled -->/>
+                    <label class="form-check-label"><i class="input-helper"></i> <strong>[[user:enable_topic_searching]]</strong></label>
 				</div>
-				<p class="help-block">[[user:topic_search_help]]</p>
+				<p class="form-text">[[user:topic_search_help]]</p>
 				<!-- ENDIF inTopicSearchAvailable -->
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="updateUrlWithPostIndex" {{{ if settings.updateUrlWithPostIndex }}}checked{{{ end }}}/> <strong>[[user:update_url_with_post_index]]</strong>
-					</label>
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" data-property="updateUrlWithPostIndex" {{{ if settings.updateUrlWithPostIndex }}}checked{{{ end }}}/>
+					<label class="form-check-label"><strong>[[user:update_url_with_post_index]]</strong></label>
 				</div>
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="scrollToMyPost" <!-- IF settings.scrollToMyPost -->checked<!-- ENDIF settings.scrollToMyPost -->/><i class="input-helper"></i> <strong>[[user:scroll_to_my_post]]</strong>
-					</label>
+				<div class="form-check">
+                    <input class="form-check-input" type="checkbox" data-property="scrollToMyPost" <!-- IF settings.scrollToMyPost -->checked<!-- ENDIF settings.scrollToMyPost -->/>
+					<label><i class="input-helper"></i> <strong>[[user:scroll_to_my_post]]</strong></label>
 				</div>
 			</div>
 
 			<h4>[[global:privacy]]</h4>
 			<div class="user-setting">
 				<!-- IF !hideEmail -->
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="showemail" <!-- IF settings.showemail -->checked <!-- ENDIF settings.showemail -->/><i class="input-helper"></i> <strong>[[user:show_email]]</strong>
-					</label>
+				<div class="form-check">
+                    <input class="form-check-input" type="checkbox" data-property="showemail" <!-- IF settings.showemail -->checked <!-- ENDIF settings.showemail -->/>
+					<label class="form-check-label"><i class="input-helper"></i> <strong>[[user:show_email]]</strong></label>
 				</div>
 				<!-- ENDIF !hideEmail -->
 				<!-- IF !hideFullname -->
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="showfullname" <!-- IF settings.showfullname -->checked<!-- ENDIF settings.showfullname -->/><i class="input-helper"></i> <strong>[[user:show_fullname]]</strong>
-					</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" data-property="showfullname" <!-- IF settings.showfullname -->checked<!-- ENDIF settings.showfullname -->/>
+                    <label class="form-check-label"><i class="input-helper"></i> <strong>[[user:show_fullname]]</strong></label>
 				</div>
 				<!-- ENDIF !hideFullname -->
 
 				<!-- IF !config.disableChat -->
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="restrictChat" <!-- IF settings.restrictChat -->checked<!-- ENDIF settings.restrictChat -->/><i class="input-helper"></i> <strong>[[user:restrict_chats]]</strong>
-					</label>
+				<div class="form-check">
+						<input class="form-check-input" type="checkbox" data-property="restrictChat" <!-- IF settings.restrictChat -->checked<!-- ENDIF settings.restrictChat -->/>
+                        <label class="form-check-label"><i class="input-helper"></i> <strong>[[user:restrict_chats]]</strong></label>
 				</div>
 				<!-- ENDIF !config.disableChat -->
 			</div>
@@ -89,22 +82,20 @@
 						<option value="{dailyDigestFreqOptions.value}" <!-- IF dailyDigestFreqOptions.selected -->selected="1"<!-- ENDIF dailyDigestFreqOptions.selected -->>{dailyDigestFreqOptions.name}</option>
 						<!-- END dailyDigestFreqOptions -->
 					</select>
-					<p class="help-block">[[user:digest_description]]</p>
+					<p class="form-text">[[user:digest_description]]</p>
 				</div>
 			</div>
 			<!-- ENDIF !disableEmailSubscriptions -->
 
 			<h4>[[topic:watch]]</h4>
 			<div class="user-setting">
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="followTopicsOnCreate" <!-- IF settings.followTopicsOnCreate -->checked <!-- ENDIF settings.followTopicsOnCreate -->/><i class="input-helper"></i> <strong>[[user:follow_topics_you_create]]</strong>
-					</label>
+				<div class="form-check">
+                    <input class="form-check-input" type="checkbox" data-property="followTopicsOnCreate" <!-- IF settings.followTopicsOnCreate -->checked <!-- ENDIF settings.followTopicsOnCreate -->/>
+					<label class="form-check-label"><i class="input-helper"></i> <strong>[[user:follow_topics_you_create]]</strong></label>
 				</div>
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="followTopicsOnReply" <!-- IF settings.followTopicsOnReply -->checked<!-- ENDIF settings.followTopicsOnReply -->/><i class="input-helper"></i> <strong>[[user:follow_topics_you_reply_to]]</strong>
-					</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" data-property="followTopicsOnReply" <!-- IF settings.followTopicsOnReply -->checked<!-- ENDIF settings.followTopicsOnReply -->/>
+                    <label class="form-check-label"><i class="input-helper"></i> <strong>[[user:follow_topics_you_reply_to]]</strong></label>
 				</div>
 				<div class="form-group">
 					<label>[[user:default-category-watch-state]]</label>
@@ -118,10 +109,9 @@
 
 			<h4>[[global:pagination]]</h4>
 			<div class="user-setting">
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="usePagination" <!-- IF settings.usePagination -->checked<!-- ENDIF settings.usePagination -->><i class="input-helper"></i> <strong>[[user:paginate_description]]</strong>
-					</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" data-property="usePagination" <!-- IF settings.usePagination -->checked<!-- ENDIF settings.usePagination -->>
+                    <label class="form-check-label"><i class="input-helper"></i> <strong>[[user:paginate_description]]</strong></label>
 				</div>
 
 				<div class="form-group">
@@ -167,7 +157,7 @@
 				<!-- BEGIN notificationSettings -->
 				<label>{notificationSettings.label}</label>
 				<div class="row">
-					<div class="form-group col-xs-12">
+					<div class="form-group col--12">
 						<select class="form-control" data-property="{notificationSettings.name}">
 							<option value="none" <!-- IF notificationSettings.none -->selected<!-- ENDIF notificationSettings.none -->>[[notifications:none]]</option>
 							<option value="notification" <!-- IF notificationSettings.notification -->selected<!-- ENDIF notificationSettings.notification -->>[[notifications:notification_only]]</option>
@@ -180,7 +170,7 @@
 
 				<label for="upvote-notif-freq">[[user:upvote-notif-freq]]</label>
 				<div class="row">
-					<div class="form-group col-xs-12">
+					<div class="form-group col--12">
 						<select class="form-control" id="upvote-notif-freq" name="upvote-notif-freq" data-property="upvoteNotifFreq">
 							<!-- BEGIN upvoteNotifFreq -->
 							<option value="{upvoteNotifFreq.name}" <!-- IF upvoteNotifFreq.selected -->selected<!-- ENDIF upvoteNotifFreq.selected -->>

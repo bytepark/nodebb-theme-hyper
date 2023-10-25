@@ -3,7 +3,7 @@
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 
 	<div class="btn-toolbar">
-		<div class="pull-left">
+		<div class="float-start">
 			<!-- IF loggedIn -->
 			<button component="category/post" id="new_topic" class="btn btn-primary">[[category:new_topic_button]]</button>
 			<!-- ELSE -->
@@ -13,14 +13,14 @@
 
 		<!-- IMPORT partials/category-filter-right.tpl -->
 
-		<div class="btn-group pull-right bottom-sheet <!-- IF !filters.length -->hidden<!-- ENDIF !filters.length -->">
+		<div class="btn-group float-end bottom-sheet <!-- IF !filters.length -->hidden<!-- ENDIF !filters.length -->">
 			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 			{selectedFilter.name} <span class="caret"></span>
 			</button>
 			<ul class="dropdown-menu">
 				<!-- BEGIN filters -->
 				<li class="category">
-					<a href="{config.relative_path}/{filters.url}"><i class="fa fa-fw <!-- IF filters.selected -->fa-check<!-- ENDIF filters.selected -->"></i>{filters.name}</a>
+					<a class="dropdown-item" href="{config.relative_path}/{filters.url}"><i class="fa fa-fw <!-- IF filters.selected -->fa-check<!-- ENDIF filters.selected -->"></i>{filters.name}</a>
 				</li>
 				<!-- END filters -->
 			</ul>

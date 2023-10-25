@@ -3,15 +3,15 @@
 	<!-- IMPORT partials/account/menu.tpl -->
 
 	<div class="row">
-		<div class="col-xs-12">
+		<div class="col--12">
 			<h1>{title}</h1>
 			<!-- IF showSort -->
 			<div class="row clearfix">
-				<div class="pull-right btn-group bottom-sheet" component="thread/sort">
+				<div class="float-end btn-group bottom-sheet" component="thread/sort">
 					<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button"><span>[[topic:sort_by]]</span> <span class="caret"></span></button>
-					<ul class="dropdown-menu dropdown-menu-right">
+					<ul class="dropdown-menu dropdown-menu-end">
 						{{{each sortOptions }}}
-						<li><a href="{config.relative_path}{sortOptions.url}"><i class="fa fa-fw {{{if sortOptions.selected}}}fa-check{{{end}}}"></i>{sortOptions.name}</a></li>
+						<li><a class="dropdown-item" href="{config.relative_path}{sortOptions.url}"><i class="fa fa-fw {{{if sortOptions.selected}}}fa-check{{{end}}}"></i>{sortOptions.name}</a></li>
 						{{{end}}}
 					</ul>
 				</div>

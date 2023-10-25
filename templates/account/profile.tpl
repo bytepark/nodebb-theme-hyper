@@ -2,7 +2,7 @@
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 
 	<div class="profile row">
-		<div class="col-xs-12">
+		<div class="col--12">
 			<div class="user-info" data-uid="{uid}">
 				<!-- IF picture -->
 				<img id="user-current-picture" class="user-avatar" src="{picture}" alt="{username}" />
@@ -113,7 +113,7 @@
 	<!-- IMPORT partials/account/menu.tpl -->
 
 	<div class="row">
-		<div class="col-xs-12 account-block hidden">
+		<div class="col--12 account-block hidden">
 			<div class="account-picture-block text-center">
 				<span>
 					<span class="account-username"> {username}</span>
@@ -131,7 +131,7 @@
 	</div>
 
 	<div class="row">
-		<div class="col-xs-6">
+		<div class="col--6">
 			<h1 class="section-title">[[pages:account/best, {username}]]</h1>
 
 			<!-- IF !bestPosts.length -->
@@ -144,7 +144,7 @@
 			{{{end}}}
 			</div>
 		</div>
-		<div class="col-xs-6">
+		<div class="col--6">
 			<h1 class="section-title">[[pages:account/latest-posts, {username}]]</h1>
 
 			<!-- IF !latestPosts.length -->

@@ -1,8 +1,8 @@
 {
   "name": "nodebb-theme-hyper",
-  "version": "2.0.5",
+  "version": "3.0.0",
   "nbbpm": {
-    "compatibility": "^2.0.0"
+    "compatibility": "^3.0.0"
   },
   "description": "Hyper theme for NodeBB, based on slick",
   "main": "theme.less",
